@@ -4,9 +4,9 @@ public record Point(double X, double Y) {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("X = ").append(X).append("\t")
+        var stringBuilder = new StringBuilder();
+        stringBuilder.append("X = ").append(X).append("\t")
                 .append("Y = ").append(Y);
-        return sb.toString();
+        return stringBuilder.toString();
     }
 }

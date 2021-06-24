@@ -18,14 +18,14 @@ public enum TriangleComparator {
         return switch (this) {
             case ID -> Comparator.comparingLong(Triangle::getTriangleID);
 
-            case POINT_A -> Comparator.comparingDouble((ToDoubleFunction<Triangle>) tr -> tr.getA().X())
-                    .thenComparing(tr -> tr.getA().Y());
+            case POINT_A -> Comparator.comparingDouble((ToDoubleFunction<Triangle>) tr -> tr.getPointA().X())
+                    .thenComparing(tr -> tr.getPointA().Y());
 
-            case POINT_B -> Comparator.comparingDouble((ToDoubleFunction<Triangle>) tr -> tr.getB().X())
-                    .thenComparing(tr -> tr.getB().Y());
+            case POINT_B -> Comparator.comparingDouble((ToDoubleFunction<Triangle>) tr -> tr.getPointB().X())
+                    .thenComparing(tr -> tr.getPointB().Y());
 
-            case POINT_C -> Comparator.comparingDouble((ToDoubleFunction<Triangle>) tr -> tr.getC().X())
-                    .thenComparing(tr -> tr.getC().Y());
+            case POINT_C -> Comparator.comparingDouble((ToDoubleFunction<Triangle>) tr -> tr.getPointC().X())
+                    .thenComparing(tr -> tr.getPointC().Y());
 
             case AREA -> Comparator.comparingDouble((ToDoubleFunction<Triangle>) tr ->
                     TriangleWarehouse.getInstance()

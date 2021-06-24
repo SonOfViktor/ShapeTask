@@ -8,8 +8,8 @@ public class IsoscelesTriangleTriangleSpecification implements TriangleSpecifica
     @Override
     public boolean specify(Triangle triangle) {
 
-        boolean isoscelesTriangle = new TriangleCalculation().isIsoscelesTriangle(triangle);
+        var triangleCalculation = new TriangleCalculation();
 
-        return isoscelesTriangle;
+        return triangleCalculation.isIsoscelesTriangle(triangle);
     }
 }

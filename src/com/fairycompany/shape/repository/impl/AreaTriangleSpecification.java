@@ -15,10 +15,10 @@ public class AreaTriangleSpecification implements TriangleSpecification {
 
     @Override
     public boolean specify(Triangle triangle) {
-        TriangleCalculation triangleCalculation = new TriangleCalculation();
+        var triangleCalculation = new TriangleCalculation();
 
-        boolean areaTriangle = (triangleCalculation.calculateArea(triangle) >= fromArea &&
-                triangleCalculation.calculateArea(triangle) <= toArea);
+        boolean areaTriangle = triangleCalculation.calculateArea(triangle) >= fromArea &&
+                triangleCalculation.calculateArea(triangle) <= toArea;
 
         return areaTriangle;
     }

@@ -15,7 +15,7 @@ public class TriangleCreator {
     private static Logger logger = LogManager.getLogger();
 
     public List<Triangle> createTriangleList(List<double[]> doubleArraysList) throws TriangleException {
-        ArrayList<Triangle> TriangleArrayList = new ArrayList<>();
+        List<Triangle> triangleArrayList = new ArrayList<>();
 
         if (doubleArraysList == null || doubleArraysList.isEmpty()) {
             throw new TriangleException("Given list is null or hasn't any arrays");
@@ -23,12 +23,12 @@ public class TriangleCreator {
 
         for (double[] coordinateArray : doubleArraysList) {
             Triangle triangle = createTriangle(coordinateArray);
-            TriangleArrayList.add(triangle);
+            triangleArrayList.add(triangle);
         }
 
         logger.log(Level.INFO, "Creating Triangle list is successful");
 
-        return TriangleArrayList;
+        return triangleArrayList;
     }
 
     public Triangle createTriangle(double[] coordinateArray) throws TriangleException {
@@ -36,7 +36,7 @@ public class TriangleCreator {
             throw new TriangleException(String.format("Parameters %s aren't correct", Arrays.toString(coordinateArray)));
         } // todo or separate String variable?
 
-        Triangle triangle = new Triangle(new Point(coordinateArray[0], coordinateArray[1]),
+        var triangle = new Triangle(new Point(coordinateArray[0], coordinateArray[1]),
                 new Point(coordinateArray[2], coordinateArray[3]),
                 new Point(coordinateArray[4], coordinateArray[5]));
 

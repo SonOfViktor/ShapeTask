@@ -13,21 +13,21 @@ import org.apache.logging.log4j.Logger;
 
 public class Triangle implements Observable {
     private static Logger logger = LogManager.getLogger();
-    private long triangleID;
-    private Point A;
-    private Point B;
-    private Point C;
+    private final long triangleID;
+    private Point pointA;
+    private Point pointB;
+    private Point pointC;
     private Observer observer = new TriangleObserver();
 
-    public Triangle(Point A, Point B, Point C) throws TriangleException {
-        if (!TriangleValidator.isTrianglePossible(A, B, C)) {
+    public Triangle(Point pointA, Point pointB, Point pointC) throws TriangleException {
+        if (!TriangleValidator.isTrianglePossible(pointA, pointB, pointC)) {
             throw new TriangleException("Points can't be on one line");
         }
 
         this.triangleID = IDGenerator.generateID();
-        this.A = A;
-        this.B = B;
-        this.C = C;
+        this.pointA = pointA;
+        this.pointB = pointB;
+        this.pointC = pointC;
         notifyObservers();
     }
 
@@ -35,30 +35,30 @@ public class Triangle implements Observable {
         return triangleID;
     }
 
-    public Point getA() {
-        return A;
+    public Point getPointA() {
+        return pointA;
     }
 
-    public void setA(Point A) {
-        this.A = A;
+    public void setPointA(Point pointA) {
+        this.pointA = pointA;
         notifyObservers();
     }
 
-    public Point getB() {
-        return B;
+    public Point getPointB() {
+        return pointB;
     }
 
-    public void setB(Point B) {
-        this.B = B;
+    public void setPointB(Point pointB) {
+        this.pointB = pointB;
         notifyObservers();
     }
 
-    public Point getC() {
-        return C;
+    public Point getPointC() {
+        return pointC;
     }
 
-    public void setC(Point C) {
-        this.C = C;
+    public void setPointC(Point pointC) {
+        this.pointC = pointC;
         notifyObservers();
     }
 
@@ -69,16 +69,16 @@ public class Triangle implements Observable {
 
         Triangle triangle = (Triangle) o;
 
-        if (A != null ? !A.equals(triangle.A) : triangle.A != null) return false;
-        if (B != null ? !B.equals(triangle.B) : triangle.B != null) return false;
-        return C != null ? C.equals(triangle.C) : triangle.C == null;
+        if (pointA != null ? !pointA.equals(triangle.pointA) : triangle.pointA != null) return false;
+        if (pointB != null ? !pointB.equals(triangle.pointB) : triangle.pointB != null) return false;
+        return pointC != null ? pointC.equals(triangle.pointC) : triangle.pointC == null;
     }
 
     @Override
     public int hashCode() {
-        int result = A != null ? A.hashCode() : 0;
-        result = 31 * result + (B != null ? B.hashCode() : 0);
-        result = 31 * result + (C != null ? C.hashCode() : 0);
+        int result = pointA != null ? pointA.hashCode() : 0;
+        result = 31 * result + (pointB != null ? pointB.hashCode() : 0);
+        result = 31 * result + (pointC != null ? pointC.hashCode() : 0);
         return result;
     }
 
@@ -99,17 +99,17 @@ public class Triangle implements Observable {
             return;
         }
 
-        TriangleEvent triangleEvent = new TriangleEvent(this);
+        var triangleEvent = new TriangleEvent(this);
         observer.parameterChange(triangleEvent);
     }
 
     @Override
     public String toString() {
-        StringBuilder stringBuilder = new StringBuilder();
+        var stringBuilder = new StringBuilder();
         stringBuilder.append(String.format("Triangle %05d", triangleID))
-                .append("\nPoint A: ").append(A)
-                .append("\nPoint B: ").append(B)
-                .append("\nPoint C: ").append(C);
+                .append("\nPoint A: ").append(pointA)
+                .append("\nPoint B: ").append(pointB)
+                .append("\nPoint C: ").append(pointC);
         return stringBuilder.toString();
     }
 }

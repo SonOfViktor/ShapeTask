@@ -11,6 +11,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class TriangleReader {
     private static Logger logger = LogManager.getLogger();
@@ -23,12 +24,12 @@ public class TriangleReader {
         List<String> doubleStringList;
         Path dataFile = Paths.get(path);
 
-        try {
+        try (Stream<String> dataStream = Files.lines(dataFile)){
             if (!Files.isReadable(dataFile) || Files.size(dataFile) == 0) {
                 throw new TriangleException(String.format("File %s does not exist or is empty", dataFile.getFileName()));
             }
 
-            doubleStringList = Files.lines(dataFile)
+            doubleStringList = dataStream
                     .collect(Collectors.toList());
 
             logger.log(Level.INFO, "Read file {} is successful", dataFile.getFileName());

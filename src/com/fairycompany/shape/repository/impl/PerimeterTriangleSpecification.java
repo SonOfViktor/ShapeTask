@@ -15,7 +15,7 @@ public class PerimeterTriangleSpecification implements TriangleSpecification {
 
     @Override
     public boolean specify(Triangle triangle) {
-        TriangleCalculation triangleCalculation = new TriangleCalculation();
+        var triangleCalculation = new TriangleCalculation();
 
         boolean perimeter = (triangleCalculation.calculatePerimeter(triangle) >= fromPerimeter &&
                 triangleCalculation.calculatePerimeter(triangle) <= toPerimeter);

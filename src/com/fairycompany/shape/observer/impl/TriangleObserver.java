@@ -15,8 +15,8 @@ public class TriangleObserver implements Observer {
 
     @Override
     public void parameterChange(TriangleEvent event) {
-        TriangleWarehouse triangleWarehouse = TriangleWarehouse.getInstance();
-        TriangleCalculation triangleCalculation = new TriangleCalculation();
+        var triangleWarehouse = TriangleWarehouse.getInstance();
+        var triangleCalculation = new TriangleCalculation();
         Triangle triangle = event.getSource();
 
 

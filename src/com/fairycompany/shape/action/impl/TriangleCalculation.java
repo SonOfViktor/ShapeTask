@@ -12,17 +12,18 @@ import static com.fairycompany.shape.validator.TriangleValidator.*;
 
 public class TriangleCalculation implements ShapeCalculation {
     private static final Logger logger = LogManager.getLogger();
+    private static final String WARN_MESSAGE = "Given triangle is null or it's parameters aren't valid";
 
     @Override
     public double calculatePerimeter(Triangle triangle) {
         if (triangle == null || !isTrianglePossible(triangle)) {
-            logger.log(Level.WARN, "Given triangle is null or it's parameters aren't valid");
+            logger.log(Level.WARN, WARN_MESSAGE);
             return -1;
         }
 
-        double sideAB = calculateTriangleSide(triangle.getA(), triangle.getB());        //todo make method with array
-        double sideBC = calculateTriangleSide(triangle.getB(), triangle.getC());        // if checkers stay here
-        double sideAC = calculateTriangleSide(triangle.getA(), triangle.getC());
+        double sideAB = calculateTriangleSide(triangle.getPointA(), triangle.getPointB());        //todo make method with array
+        double sideBC = calculateTriangleSide(triangle.getPointB(), triangle.getPointC());            // if checkers stay here
+        double sideAC = calculateTriangleSide(triangle.getPointA(), triangle.getPointC());
 
         double perimeter = sideAB + sideBC + sideAC;
 
@@ -34,14 +35,14 @@ public class TriangleCalculation implements ShapeCalculation {
     @Override
     public double calculateArea(Triangle triangle) {
         if (triangle == null || !isTrianglePossible(triangle)) {
-            logger.log(Level.WARN, "Given triangle is null or it's parameters aren't valid");
+            logger.log(Level.WARN, WARN_MESSAGE);
             return -1;
         }
 
-        double area = Math.abs((triangle.getA().X() - triangle.getC().X()) *
-                (triangle.getB().Y() - triangle.getC().Y()) -
-                (triangle.getB().X() - triangle.getC().X()) *
-                        (triangle.getA().Y() - triangle.getC().Y())) / 2;
+        double area = Math.abs((triangle.getPointA().X() - triangle.getPointC().X()) *
+                (triangle.getPointB().Y() - triangle.getPointC().Y()) -
+                (triangle.getPointB().X() - triangle.getPointC().X()) *
+                        (triangle.getPointA().Y() - triangle.getPointC().Y())) / 2;
 
         logger.log(Level.INFO, "Area of triangle #{} is {}", triangle.getTriangleID(), area);
 
@@ -50,13 +51,13 @@ public class TriangleCalculation implements ShapeCalculation {
 
     public boolean isRightTriangle(Triangle triangle) {      // todo here or in validator?
         if (triangle == null || !isTrianglePossible(triangle)) {
-            logger.log(Level.WARN, "Given triangle is null or it's parameters aren't valid");
+            logger.log(Level.WARN, WARN_MESSAGE);
             return false;
         }
 
-        double sideAB = calculateTriangleSide(triangle.getA(), triangle.getB());
-        double sideBC = calculateTriangleSide(triangle.getB(), triangle.getC());
-        double sideAC = calculateTriangleSide(triangle.getA(), triangle.getC());
+        double sideAB = calculateTriangleSide(triangle.getPointA(), triangle.getPointB());
+        double sideBC = calculateTriangleSide(triangle.getPointB(), triangle.getPointC());
+        double sideAC = calculateTriangleSide(triangle.getPointA(), triangle.getPointC());
 
         boolean rightTriangle = roughDoubleComparing(Math.pow(sideAC, 2), Math.hypot(sideAB, sideBC));
 
@@ -71,13 +72,13 @@ public class TriangleCalculation implements ShapeCalculation {
 
     public boolean isIsoscelesTriangle(Triangle triangle) {
         if (triangle == null || !isTrianglePossible(triangle)) {
-            logger.log(Level.WARN, "Given triangle is null or it's parameters aren't valid");
+            logger.log(Level.WARN, WARN_MESSAGE);
             return false;
         }
 
-        double sideAB = calculateTriangleSide(triangle.getA(), triangle.getB());
-        double sideBC = calculateTriangleSide(triangle.getB(), triangle.getC());
-        double sideAC = calculateTriangleSide(triangle.getA(), triangle.getC());
+        double sideAB = calculateTriangleSide(triangle.getPointA(), triangle.getPointB());
+        double sideBC = calculateTriangleSide(triangle.getPointB(), triangle.getPointC());
+        double sideAC = calculateTriangleSide(triangle.getPointA(), triangle.getPointC());
 
         boolean isoscelesTriangle = roughDoubleComparing(sideAB, sideAC) ||
                 roughDoubleComparing(sideBC, sideAC) ||
@@ -94,13 +95,13 @@ public class TriangleCalculation implements ShapeCalculation {
 
     public boolean isEquilateralTriangle(Triangle triangle) {
         if (triangle == null || !isTrianglePossible(triangle)) {
-            logger.log(Level.WARN, "Given triangle is null or it's parameters aren't valid");
+            logger.log(Level.WARN, WARN_MESSAGE);
             return false;
         }
 
-        double sideAB = calculateTriangleSide(triangle.getA(), triangle.getB());
-        double sideBC = calculateTriangleSide(triangle.getB(), triangle.getC());
-        double sideAC = calculateTriangleSide(triangle.getA(), triangle.getC());
+        double sideAB = calculateTriangleSide(triangle.getPointA(), triangle.getPointB());
+        double sideBC = calculateTriangleSide(triangle.getPointB(), triangle.getPointC());
+        double sideAC = calculateTriangleSide(triangle.getPointA(), triangle.getPointC());
 
         boolean equilateralTriangle = roughDoubleComparing(sideAB, sideBC) &&
                 roughDoubleComparing(sideAB, sideAC);
@@ -116,8 +117,8 @@ public class TriangleCalculation implements ShapeCalculation {
 
     // todo acute or obtuse
 
-    private double calculateTriangleSide(Point A, Point B) {
-        double side = Math.hypot(B.X() - A.X(), B.Y() - A.Y());
+    private double calculateTriangleSide(Point pointA, Point pointB) {
+        double side = Math.hypot(pointB.X() - pointA.X(), pointB.Y() - pointA.Y());
 
         logger.log(Level.DEBUG, "Сторона равна {}", side);
 
