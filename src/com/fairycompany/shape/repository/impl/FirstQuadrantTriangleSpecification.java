@@ -6,10 +6,10 @@ import com.fairycompany.shape.repository.TriangleSpecification;
 public class FirstQuadrantTriangleSpecification implements TriangleSpecification {
     @Override
     public boolean specify(Triangle triangle) {
-        boolean PointAFirstQuadrant = triangle.getA().getX() >= 0 && triangle.getA().getY() >= 0;
-        boolean PointBFirstQuadrant = triangle.getB().getX() >= 0 && triangle.getA().getY() >= 0;
-        boolean PointCFirstQuadrant = triangle.getC().getX() >= 0 && triangle.getA().getY() >= 0;
+        boolean PointAFirstQuadrant = triangle.getA().X() >= 0 && triangle.getA().Y() >= 0;
+        boolean PointBFirstQuadrant = triangle.getB().X() >= 0 && triangle.getA().Y() >= 0;
+        boolean PointCFirstQuadrant = triangle.getC().X() >= 0 && triangle.getA().Y() >= 0;
 
-        return  PointAFirstQuadrant && PointBFirstQuadrant && PointCFirstQuadrant;
+        return PointAFirstQuadrant && PointBFirstQuadrant && PointCFirstQuadrant;
     }
 }

@@ -5,7 +5,6 @@ import com.fairycompany.shape.entity.TriangleWarehouse;
 
 import java.util.Comparator;
 import java.util.function.ToDoubleFunction;
-import java.util.function.ToLongFunction;
 
 public enum TriangleComparator {
     ID,
@@ -16,28 +15,27 @@ public enum TriangleComparator {
     PERIMETER;
 
     public Comparator<Triangle> getComparator() {
-        return switch(this) {
+        return switch (this) {
+            case ID -> Comparator.comparingLong(Triangle::getTriangleID);
 
-            case POINT_A -> Comparator.comparingDouble((ToDoubleFunction<Triangle>) tr -> tr.getA().getX())
-                                        .thenComparing(tr -> tr.getA().getY());
+            case POINT_A -> Comparator.comparingDouble((ToDoubleFunction<Triangle>) tr -> tr.getA().X())
+                    .thenComparing(tr -> tr.getA().Y());
 
-            case POINT_B -> Comparator.comparingDouble((ToDoubleFunction<Triangle>) tr -> tr.getB().getX())
-                                        .thenComparing(tr -> tr.getB().getY());
+            case POINT_B -> Comparator.comparingDouble((ToDoubleFunction<Triangle>) tr -> tr.getB().X())
+                    .thenComparing(tr -> tr.getB().Y());
 
-            case POINT_C -> Comparator.comparingDouble((ToDoubleFunction<Triangle>) tr -> tr.getC().getX())
-                                        .thenComparing(tr -> tr.getC().getY());
+            case POINT_C -> Comparator.comparingDouble((ToDoubleFunction<Triangle>) tr -> tr.getC().X())
+                    .thenComparing(tr -> tr.getC().Y());
 
             case AREA -> Comparator.comparingDouble((ToDoubleFunction<Triangle>) tr ->
-                        TriangleWarehouse.getInstance()
-                                         .getParameters(tr.getTriangleID())
-                                         .getArea());
+                    TriangleWarehouse.getInstance()
+                            .getParameters(tr.getTriangleID())
+                            .area());
 
             case PERIMETER -> Comparator.comparingDouble((ToDoubleFunction<Triangle>) tr ->
-                        TriangleWarehouse.getInstance()
-                                         .getParameters(tr.getTriangleID())
-                                         .getPerimeter());
-
-            default -> Comparator.comparingLong(Triangle::getTriangleID); // todo ask how it works it's not static
+                    TriangleWarehouse.getInstance()
+                            .getParameters(tr.getTriangleID())
+                            .perimeter());
         };
     }
 }

@@ -5,8 +5,6 @@ import com.fairycompany.shape.validator.TriangleValidator;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -20,7 +18,8 @@ public class TriangleParser {
             throw new TriangleException("List is null or hasn't any strings");
         }
 
-        List<double[]> doubleArraysList = new ArrayList<>();
+        List<double[]> doubleArraysList;
+
         doubleArraysList = doubleStringList.stream()
                 .filter(TriangleValidator::isTriangleData)
                 .peek(line -> logger.log(Level.DEBUG, "{} added", line))
@@ -30,7 +29,7 @@ public class TriangleParser {
                         .toArray())
                 .collect(Collectors.toList());
 
-        logger.info("Parsing is successful");
+        logger.log(Level.INFO, "Parsing is successful");
 
         return doubleArraysList;
     }

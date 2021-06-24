@@ -7,18 +7,23 @@ import com.fairycompany.shape.observer.TriangleEvent;
 import com.fairycompany.shape.observer.impl.TriangleObserver;
 import com.fairycompany.shape.util.IDGenerator;
 import com.fairycompany.shape.validator.TriangleValidator;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class Triangle implements Observable {
+    private static Logger logger = LogManager.getLogger();
     private long triangleID;
     private Point A;
     private Point B;
     private Point C;
     private Observer observer = new TriangleObserver();
 
-    public Triangle(Point A, Point B, Point C) throws TriangleException{
+    public Triangle(Point A, Point B, Point C) throws TriangleException {
         if (!TriangleValidator.isTrianglePossible(A, B, C)) {
             throw new TriangleException("Points can't be on one line");
         }
+
         this.triangleID = IDGenerator.generateID();
         this.A = A;
         this.B = B;
@@ -89,7 +94,8 @@ public class Triangle implements Observable {
 
     @Override
     public void notifyObservers() {
-        if (observer == null) {         //todo write log
+        if (observer == null) {
+            logger.log(Level.INFO, "Observer is null");
             return;
         }
 
@@ -101,9 +107,9 @@ public class Triangle implements Observable {
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(String.format("Triangle %05d", triangleID))
-                     .append("\nPoint A: ").append(A)
-                     .append("\nPoint B: ").append(B)
-                     .append("\nPoint C: ").append(C);
+                .append("\nPoint A: ").append(A)
+                .append("\nPoint B: ").append(B)
+                .append("\nPoint C: ").append(C);
         return stringBuilder.toString();
     }
 }

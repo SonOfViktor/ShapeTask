@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 
 public class TriangleRepository {
 
-    private List<Triangle> triangles = new ArrayList<>();       //todo check where list created
+    private List<Triangle> triangles = new ArrayList<>();
 
     public boolean add(Triangle triangle) {
         return triangles.add(triangle);
@@ -23,7 +23,7 @@ public class TriangleRepository {
         triangles.clear();
     }
 
-    public boolean contains (Triangle triangle) {
+    public boolean contains(Triangle triangle) {
         return triangles.contains(triangle);
     }
 
@@ -51,8 +51,8 @@ public class TriangleRepository {
         return triangles.size();
     }
 
-    public List<Triangle> query (TriangleSpecification triangleSpecification) {
-            return triangles.stream().filter(triangleSpecification::specify).collect(Collectors.toList()); // todo catch exception
+    public List<Triangle> query(TriangleSpecification triangleSpecification) {
+        return triangles.stream().filter(triangleSpecification::specify).collect(Collectors.toList());
     }
 
     public List<Triangle> sort(Comparator<? super Triangle> comparator) {

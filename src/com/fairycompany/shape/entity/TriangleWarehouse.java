@@ -1,11 +1,14 @@
 package com.fairycompany.shape.entity;
 
-// import com.fairycompany.shape.exception.TriangleException;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class TriangleWarehouse {
+    private static Logger logger = LogManager.getLogger();
     private static TriangleWarehouse instance;
     private Map<Long, TriangleParameters> triangleMap = new HashMap<>();
 
@@ -27,17 +30,14 @@ public class TriangleWarehouse {
         instance.triangleMap.put(id, triangleParameters);
     }
 
-    public void putParameters(long id, double perimeter, double area) {
-        instance.triangleMap.put(id, new TriangleParameters(perimeter, area));
-    }
-
-    public TriangleParameters getParameters(long id) { //throws TriangleException {
+    public TriangleParameters getParameters(long id) {
         TriangleParameters data = instance.triangleMap.get(id);
 
-//        if (data == null) {
-//            throw new TriangleException("Given id is wrong");
-//        }
+        if (data == null) {
+            data = new TriangleParameters(-1, -1);
+            logger.log(Level.WARN, "ID {} is not found", id);
+        }
 
-        return data;                                        // todo clone
+        return data;
     }
 }

@@ -8,6 +8,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class TriangleCreator {
@@ -31,9 +32,9 @@ public class TriangleCreator {
     }
 
     public Triangle createTriangle(double[] coordinateArray) throws TriangleException {
-        if(coordinateArray.length != 6) {
-            throw new TriangleException("Parameters aren't correct");
-        }
+        if (coordinateArray.length != 6) {
+            throw new TriangleException(String.format("Parameters %s aren't correct", Arrays.toString(coordinateArray)));
+        } // todo or separate String variable?
 
         Triangle triangle = new Triangle(new Point(coordinateArray[0], coordinateArray[1]),
                 new Point(coordinateArray[2], coordinateArray[3]),

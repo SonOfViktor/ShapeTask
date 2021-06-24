@@ -3,23 +3,25 @@ package com.fairycompany.shape.action.impl;
 import com.fairycompany.shape.action.ShapeCalculation;
 import com.fairycompany.shape.entity.Point;
 import com.fairycompany.shape.entity.Triangle;
-import com.fairycompany.shape.exception.TriangleException;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import static com.fairycompany.shape.validator.TriangleValidator.*;
 
-public class TriangleCalculation implements ShapeCalculation {                  // todo BigDecimal
+
+public class TriangleCalculation implements ShapeCalculation {
     private static final Logger logger = LogManager.getLogger();
 
     @Override
-    public double calculatePerimeter(Triangle triangle) throws TriangleException {
-        if (triangle == null) {
-            throw new TriangleException();
+    public double calculatePerimeter(Triangle triangle) {
+        if (triangle == null || !isTrianglePossible(triangle)) {
+            logger.log(Level.WARN, "Given triangle is null or it's parameters aren't valid");
+            return -1;
         }
 
-        double sideAB = calculateTriangleSide(triangle.getA(), triangle.getB());
-        double sideBC = calculateTriangleSide(triangle.getB(), triangle.getC());
+        double sideAB = calculateTriangleSide(triangle.getA(), triangle.getB());        //todo make method with array
+        double sideBC = calculateTriangleSide(triangle.getB(), triangle.getC());        // if checkers stay here
         double sideAC = calculateTriangleSide(triangle.getA(), triangle.getC());
 
         double perimeter = sideAB + sideBC + sideAC;
@@ -30,33 +32,33 @@ public class TriangleCalculation implements ShapeCalculation {                  
     }
 
     @Override
-    public double calculateArea(Triangle triangle) throws TriangleException {
-        if (triangle == null) {
-            throw new TriangleException();
+    public double calculateArea(Triangle triangle) {
+        if (triangle == null || !isTrianglePossible(triangle)) {
+            logger.log(Level.WARN, "Given triangle is null or it's parameters aren't valid");
+            return -1;
         }
 
-        double area = Math.abs((triangle.getA().getX() - triangle.getC().getX()) *
-                                       (triangle.getB().getY() - triangle.getC().getY()) -
-                                       (triangle.getB().getX() - triangle.getC().getX()) *
-                                       (triangle.getA().getY() - triangle.getC().getY())) / 2;
+        double area = Math.abs((triangle.getA().X() - triangle.getC().X()) *
+                (triangle.getB().Y() - triangle.getC().Y()) -
+                (triangle.getB().X() - triangle.getC().X()) *
+                        (triangle.getA().Y() - triangle.getC().Y())) / 2;
 
         logger.log(Level.INFO, "Area of triangle #{} is {}", triangle.getTriangleID(), area);
 
         return area;
     }
 
-    public boolean isRightTriangle(Triangle triangle) throws TriangleException {      // todo here or in validator?
-        if (triangle == null) {
-            throw new TriangleException();
+    public boolean isRightTriangle(Triangle triangle) {      // todo here or in validator?
+        if (triangle == null || !isTrianglePossible(triangle)) {
+            logger.log(Level.WARN, "Given triangle is null or it's parameters aren't valid");
+            return false;
         }
-
-        double delta = 0.001;
 
         double sideAB = calculateTriangleSide(triangle.getA(), triangle.getB());
         double sideBC = calculateTriangleSide(triangle.getB(), triangle.getC());
         double sideAC = calculateTriangleSide(triangle.getA(), triangle.getC());
 
-        boolean rightTriangle = Math.pow(sideAC, 2) - Math.hypot(sideAB, sideBC) == delta;
+        boolean rightTriangle = roughDoubleComparing(Math.pow(sideAC, 2), Math.hypot(sideAB, sideBC));
 
         if (rightTriangle) {
             logger.log(Level.INFO, "Triangle #{} is right", triangle.getTriangleID());
@@ -67,16 +69,19 @@ public class TriangleCalculation implements ShapeCalculation {                  
         return rightTriangle;
     }
 
-    public boolean isIsoscelesTriangle(Triangle triangle) throws TriangleException {
-        if (triangle == null) {
-            throw new TriangleException();
+    public boolean isIsoscelesTriangle(Triangle triangle) {
+        if (triangle == null || !isTrianglePossible(triangle)) {
+            logger.log(Level.WARN, "Given triangle is null or it's parameters aren't valid");
+            return false;
         }
 
         double sideAB = calculateTriangleSide(triangle.getA(), triangle.getB());
         double sideBC = calculateTriangleSide(triangle.getB(), triangle.getC());
         double sideAC = calculateTriangleSide(triangle.getA(), triangle.getC());
 
-        boolean isoscelesTriangle = sideAB == sideAC || sideBC == sideAC || sideAB == sideBC;
+        boolean isoscelesTriangle = roughDoubleComparing(sideAB, sideAC) ||
+                roughDoubleComparing(sideBC, sideAC) ||
+                roughDoubleComparing(sideAB, sideBC);
 
         if (isoscelesTriangle) {
             logger.log(Level.INFO, "Triangle #{} is isosceles", triangle.getTriangleID());
@@ -87,16 +92,18 @@ public class TriangleCalculation implements ShapeCalculation {                  
         return isoscelesTriangle;
     }
 
-    public boolean isEquilateralTriangle(Triangle triangle) throws TriangleException {
-        if (triangle == null) {
-            throw new TriangleException();
+    public boolean isEquilateralTriangle(Triangle triangle) {
+        if (triangle == null || !isTrianglePossible(triangle)) {
+            logger.log(Level.WARN, "Given triangle is null or it's parameters aren't valid");
+            return false;
         }
 
         double sideAB = calculateTriangleSide(triangle.getA(), triangle.getB());
         double sideBC = calculateTriangleSide(triangle.getB(), triangle.getC());
         double sideAC = calculateTriangleSide(triangle.getA(), triangle.getC());
 
-        boolean equilateralTriangle = sideAB == sideBC && sideAB == sideAC;
+        boolean equilateralTriangle = roughDoubleComparing(sideAB, sideBC) &&
+                roughDoubleComparing(sideAB, sideAC);
 
         if (equilateralTriangle) {
             logger.log(Level.INFO, "Triangle #{} is equilateral", triangle.getTriangleID());
@@ -110,10 +117,15 @@ public class TriangleCalculation implements ShapeCalculation {                  
     // todo acute or obtuse
 
     private double calculateTriangleSide(Point A, Point B) {
-        double side = Math.hypot(B.getX() - A.getX(), B.getY() - A.getY());
+        double side = Math.hypot(B.X() - A.X(), B.Y() - A.Y());
 
         logger.log(Level.DEBUG, "Сторона равна {}", side);
 
         return side;
+    }
+
+    private boolean roughDoubleComparing(double element1, double element2) {
+        double delta = 0.0001;
+        return Math.abs(element1 - element2) <= delta;
     }
 }
