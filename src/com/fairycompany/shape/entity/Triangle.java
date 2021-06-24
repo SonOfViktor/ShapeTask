@@ -4,7 +4,6 @@ import com.fairycompany.shape.exception.TriangleException;
 import com.fairycompany.shape.observer.Observable;
 import com.fairycompany.shape.observer.Observer;
 import com.fairycompany.shape.observer.TriangleEvent;
-import com.fairycompany.shape.observer.impl.TriangleObserver;
 import com.fairycompany.shape.util.IDGenerator;
 import com.fairycompany.shape.validator.TriangleValidator;
 import org.apache.logging.log4j.Level;
@@ -17,7 +16,7 @@ public class Triangle implements Observable {
     private Point pointA;
     private Point pointB;
     private Point pointC;
-    private Observer observer = new TriangleObserver();
+    private Observer observer;
 
     public Triangle(Point pointA, Point pointB, Point pointC) throws TriangleException {
         if (!TriangleValidator.isTrianglePossible(pointA, pointB, pointC)) {
@@ -28,7 +27,6 @@ public class Triangle implements Observable {
         this.pointA = pointA;
         this.pointB = pointB;
         this.pointC = pointC;
-        notifyObservers();
     }
 
     public long getTriangleID() {
@@ -63,26 +61,6 @@ public class Triangle implements Observable {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Triangle)) return false;
-
-        Triangle triangle = (Triangle) o;
-
-        if (pointA != null ? !pointA.equals(triangle.pointA) : triangle.pointA != null) return false;
-        if (pointB != null ? !pointB.equals(triangle.pointB) : triangle.pointB != null) return false;
-        return pointC != null ? pointC.equals(triangle.pointC) : triangle.pointC == null;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = pointA != null ? pointA.hashCode() : 0;
-        result = 31 * result + (pointB != null ? pointB.hashCode() : 0);
-        result = 31 * result + (pointC != null ? pointC.hashCode() : 0);
-        return result;
-    }
-
-    @Override
     public void attach(Observer observer) {
         this.observer = observer;
     }
@@ -101,6 +79,26 @@ public class Triangle implements Observable {
 
         var triangleEvent = new TriangleEvent(this);
         observer.parameterChange(triangleEvent);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Triangle)) return false;
+
+        Triangle triangle = (Triangle) o;
+
+        if (pointA != null ? !pointA.equals(triangle.pointA) : triangle.pointA != null) return false;
+        if (pointB != null ? !pointB.equals(triangle.pointB) : triangle.pointB != null) return false;
+        return pointC != null ? pointC.equals(triangle.pointC) : triangle.pointC == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = pointA != null ? pointA.hashCode() : 0;
+        result = 31 * result + (pointB != null ? pointB.hashCode() : 0);
+        result = 31 * result + (pointC != null ? pointC.hashCode() : 0);
+        return result;
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.fairycompany.shape.comparator;
 
+import com.fairycompany.shape.action.impl.TriangleCalculation;
 import com.fairycompany.shape.entity.Triangle;
 import com.fairycompany.shape.entity.TriangleWarehouse;
 
