@@ -1,0 +1,6 @@
+21-06-20 19:46.281 [main] INFO  com.fairycompany.shape.reader.TriangleReader - Read file data.txt is successful
+21-06-20 19:46.291 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 1.0 53 89 74 12.7 45 added
+21-06-20 19:46.294 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 1 8 45.3 7 15.7 78.3 added
+21-06-20 19:46.295 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 9.0 45.3 0.8 15 13.2 7 added
+21-06-20 19:46.296 [main] INFO  com.fairycompany.shape.parser.TriangleParser - Parsing is successful
+21-06-20 19:46.298 [main] INFO  com.fairycompany.shape.creator.TriangleCreator - Creating CustomArray list is successful

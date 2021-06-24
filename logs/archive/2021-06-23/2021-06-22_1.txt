@@ -1,0 +1,44 @@
+21-06-22 17:01.350 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 77.2000647668122
+21-06-22 17:01.357 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 71.82047061945501
+21-06-22 17:01.358 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Perimeter of triangle #2 is 193.33182063054784
+21-06-22 17:01.358 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Area of triangle #2 is 1564.495
+21-06-22 17:01.358 [main] INFO  fairycompany.shape.observer.impl.TriangleObserver - Parameters of the triangle #2 were updated
+21-06-22 17:01.358 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 31.389966549838817
+21-06-22 17:01.359 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 14.756693396557372
+21-06-22 17:01.359 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 38.529599011668935
+21-06-22 17:01.359 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Perimeter of triangle #3 is 84.67625895806512
+21-06-22 17:01.359 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Area of triangle #3 is 220.65999999999997
+21-06-22 17:01.359 [main] INFO  fairycompany.shape.observer.impl.TriangleObserver - Parameters of the triangle #3 were updated
+21-06-22 17:01.359 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 3.605551275463989
+21-06-22 17:01.360 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 8.602325267042627
+21-06-22 17:01.360 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 5.0
+21-06-22 17:01.360 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Perimeter of triangle #4 is 17.207876542506618
+21-06-22 17:01.360 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Area of triangle #4 is 0.5
+21-06-22 17:01.360 [main] INFO  fairycompany.shape.observer.impl.TriangleObserver - Parameters of the triangle #4 were updated
+21-06-22 17:01.360 [main] INFO  com.fairycompany.shape.creator.TriangleCreator - Creating Triangle list is successful
+21-06-22 17:01.360 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 103.46496991735899
+21-06-22 17:01.361 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 81.62530244966936
+21-06-22 17:01.361 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 29.042899304305003
+21-06-22 17:01.361 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Perimeter of triangle #1 is 214.13317167133334
+21-06-22 17:01.361 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Area of triangle #1 is 874.9
+21-06-22 17:01.361 [main] INFO  fairycompany.shape.observer.impl.TriangleObserver - Parameters of the triangle #1 were updated
+21-06-22 17:01.364 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 3.605551275463989
+21-06-22 17:01.364 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 8.602325267042627
+21-06-22 17:01.364 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 5.0
+21-06-22 17:01.364 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Perimeter of triangle #4 is 17.207876542506618
+21-06-22 17:01.364 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Area of triangle #4 is 0.5
+21-06-22 17:01.365 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 31.389966549838817
+21-06-22 17:01.365 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 14.756693396557372
+21-06-22 17:01.365 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 38.529599011668935
+21-06-22 17:01.365 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Perimeter of triangle #3 is 84.67625895806512
+21-06-22 17:01.365 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Area of triangle #3 is 220.65999999999997
+21-06-22 17:01.365 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 103.46496991735899
+21-06-22 17:01.366 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 81.62530244966936
+21-06-22 17:01.366 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 29.042899304305003
+21-06-22 17:01.367 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Perimeter of triangle #1 is 214.13317167133334
+21-06-22 17:01.367 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Area of triangle #1 is 874.9
+21-06-22 17:01.367 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 44.311285244280604
+21-06-22 17:01.367 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 77.2000647668122
+21-06-22 17:01.367 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 71.82047061945501
+21-06-22 17:01.367 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Perimeter of triangle #2 is 193.33182063054784
+21-06-22 17:01.367 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Area of triangle #2 is 1564.495

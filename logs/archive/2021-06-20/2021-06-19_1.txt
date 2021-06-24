@@ -1,0 +1,79 @@
+21-06-19 13:48.469 [main] INFO  com.fairycompany.shape.reader.TriangleReader - 1.0 53 89 74 12.7 45
+21-06-19 13:48.471 [main] INFO  com.fairycompany.shape.reader.TriangleReader - 1 8 45.3 7 15.7 78.3
+21-06-19 13:48.471 [main] INFO  com.fairycompany.shape.reader.TriangleReader - 9.0 45.3 0.8 15 13.2 7
+21-06-19 13:48.473 [main] INFO  com.fairycompany.shape.reader.TriangleReader - Read file data.txt is successful
+21-06-19 13:49.692 [main] INFO  com.fairycompany.shape.reader.TriangleReader - 1.0 53 89 74 12.7 45 added
+21-06-19 13:49.694 [main] INFO  com.fairycompany.shape.reader.TriangleReader - 1 8 45.3 7 15.7 78.3 added
+21-06-19 13:49.695 [main] INFO  com.fairycompany.shape.reader.TriangleReader - 9.0 45.3 0.8 15 13.2 7 added
+21-06-19 13:49.695 [main] INFO  com.fairycompany.shape.reader.TriangleReader - Read file data.txt is successful
+21-06-19 13:56.345 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 1.0 53 89 74 12.7 45 start filtering
+21-06-19 13:56.347 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 1.0 53 89 74 12.7 45 added
+21-06-19 13:56.347 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 1 8 45.3 7 15.7 78.3 start filtering
+21-06-19 13:56.347 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 1 8 45.3 7 15.7 78.3 added
+21-06-19 13:56.347 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 9.0 45.s 6 4 8 7.3 start filtering
+21-06-19 13:56.348 [main] DEBUG com.fairycompany.shape.reader.TriangleReader -  start filtering
+21-06-19 13:56.348 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 9.0 45.3 0.8 15 13.2 7 start filtering
+21-06-19 13:56.348 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 9.0 45.3 0.8 15 13.2 7 added
+21-06-19 13:56.348 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 7.6 13.2 s4.8 12 48 9 start filtering
+21-06-19 13:56.348 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 7 13.5 12.3 start filtering
+21-06-19 13:56.348 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 75 53 89 74 12.7 45 18 start filtering
+21-06-19 13:56.349 [main] INFO  com.fairycompany.shape.reader.TriangleReader - Read file data.txt is successful
+21-06-19 14:35.677 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 34 23 55 89 start filtering
+21-06-19 14:35.679 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 34 22 3 start filtering
+21-06-19 14:35.680 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - s 33 55 x start filtering
+21-06-19 14:35.680 [main] INFO  com.fairycompany.shape.reader.TriangleReader - Read file not_right_strings.txt is successful
+21-06-19 14:36.706 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 34 23 55 89 start filtering
+21-06-19 14:36.708 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 34 22 3 start filtering
+21-06-19 14:36.708 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - s 33 55 x start filtering
+21-06-19 14:36.708 [main] INFO  com.fairycompany.shape.reader.TriangleReader - Read file not_right_strings.txt is successful
+21-06-19 14:41.754 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 1.0 53 89 74 12.7 45 start filtering
+21-06-19 14:41.756 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 1.0 53 89 74 12.7 45 added
+21-06-19 14:41.756 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 1 8 45.3 7 15.7 78.3 start filtering
+21-06-19 14:41.756 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 1 8 45.3 7 15.7 78.3 added
+21-06-19 14:41.756 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 9.0 45.s 6 4 8 7.3 start filtering
+21-06-19 14:41.756 [main] DEBUG com.fairycompany.shape.reader.TriangleReader -  start filtering
+21-06-19 14:41.756 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 9.0 45.3 0.8 15 13.2 7 start filtering
+21-06-19 14:41.757 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 9.0 45.3 0.8 15 13.2 7 added
+21-06-19 14:41.757 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 7.6 13.2 s4.8 12 48 9 start filtering
+21-06-19 14:41.757 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 7 13.5 12.3 start filtering
+21-06-19 14:41.757 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 75 53 89 74 12.7 45 18 start filtering
+21-06-19 14:41.758 [main] INFO  com.fairycompany.shape.reader.TriangleReader - Read file data.txt is successful
+21-06-19 14:41.764 [main] INFO  com.fairycompany.shape.parser.TriangleParser - Parsing is successful
+21-06-19 14:56.440 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 1.0 53 89 74 12.7 45 added
+21-06-19 14:56.442 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 1 8 45.3 7 15.7 78.3 added
+21-06-19 14:56.443 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 9.0 45.3 0.8 15 13.2 7 added
+21-06-19 14:56.444 [main] INFO  com.fairycompany.shape.reader.TriangleReader - Read file data.txt is successful
+21-06-19 14:56.448 [main] INFO  com.fairycompany.shape.parser.TriangleParser - Parsing is successful
+21-06-19 14:59.248 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 1.0 53 89 74 12.7 45 added
+21-06-19 14:59.250 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 1 8 45.3 7 15.7 78.3 added
+21-06-19 14:59.250 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 9.0 45.s 6 4 8 7.3 isn't added
+21-06-19 14:59.250 [main] DEBUG com.fairycompany.shape.reader.TriangleReader -  isn't added
+21-06-19 14:59.251 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 9.0 45.3 0.8 15 13.2 7 added
+21-06-19 14:59.251 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 7.6 13.2 s4.8 12 48 9 isn't added
+21-06-19 14:59.251 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 7 13.5 12.3 isn't added
+21-06-19 14:59.251 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 75 53 89 74 12.7 45 18 isn't added
+21-06-19 14:59.251 [main] INFO  com.fairycompany.shape.reader.TriangleReader - Read file data.txt is successful
+21-06-19 14:59.256 [main] INFO  com.fairycompany.shape.parser.TriangleParser - Parsing is successful
+21-06-19 19:28.954 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 1.0 53 89 74 12.7 45 added
+21-06-19 19:28.956 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 1 8 45.3 7 15.7 78.3 added
+21-06-19 19:28.956 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 9.0 45.3 0.8 15 13.2 7 added
+21-06-19 19:28.957 [main] INFO  com.fairycompany.shape.reader.TriangleReader - Read file data.txt is successful
+21-06-19 19:28.961 [main] INFO  com.fairycompany.shape.parser.TriangleParser - Parsing is successful
+21-06-19 21:03.670 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 1.0 53 89 74 12.7 45 added
+21-06-19 21:03.671 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 1 8 45.3 7 15.7 78.3 added
+21-06-19 21:03.672 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 9.0 45.3 0.8 15 13.2 7 added
+21-06-19 21:03.672 [main] INFO  com.fairycompany.shape.reader.TriangleReader - Read file data.txt is successful
+21-06-19 21:03.676 [main] INFO  com.fairycompany.shape.parser.TriangleParser - Parsing is successful
+21-06-19 21:03.679 [main] INFO  com.fairycompany.shape.creator.TriangleCreator - Creating CustomArray list is successful
+21-06-19 21:06.688 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 1.0 53 89 74 12.7 45 added
+21-06-19 21:06.690 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 1 8 45.3 7 15.7 78.3 added
+21-06-19 21:06.690 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 9.0 45.3 0.8 15 13.2 7 added
+21-06-19 21:06.690 [main] INFO  com.fairycompany.shape.reader.TriangleReader - Read file data.txt is successful
+21-06-19 21:06.695 [main] INFO  com.fairycompany.shape.parser.TriangleParser - Parsing is successful
+21-06-19 21:06.697 [main] INFO  com.fairycompany.shape.creator.TriangleCreator - Creating CustomArray list is successful
+21-06-19 21:07.256 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 1.0 53 89 74 12.7 45 added
+21-06-19 21:07.258 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 1 8 45.3 7 15.7 78.3 added
+21-06-19 21:07.258 [main] DEBUG com.fairycompany.shape.reader.TriangleReader - 9.0 45.3 0.8 15 13.2 7 added
+21-06-19 21:07.258 [main] INFO  com.fairycompany.shape.reader.TriangleReader - Read file data.txt is successful
+21-06-19 21:07.263 [main] INFO  com.fairycompany.shape.parser.TriangleParser - Parsing is successful
+21-06-19 21:07.265 [main] INFO  com.fairycompany.shape.creator.TriangleCreator - Creating CustomArray list is successful

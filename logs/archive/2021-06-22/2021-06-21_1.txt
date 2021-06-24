@@ -1,0 +1,135 @@
+21-06-21 07:39.678 [main] INFO  com.fairycompany.shape.reader.TriangleReader - Read file data.txt is successful
+21-06-21 07:39.698 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 1.0 53 89 74 12.7 45 added
+21-06-21 07:39.701 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 1 8 45.3 7 15.7 78.3 added
+21-06-21 07:39.702 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 1 1 2 2 3 3 added
+21-06-21 07:39.702 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 9.0 45.3 0.8 15 13.2 7 added
+21-06-21 07:39.702 [main] INFO  com.fairycompany.shape.parser.TriangleParser - Parsing is successful
+21-06-21 07:42.092 [main] INFO  com.fairycompany.shape.reader.TriangleReader - Read file data.txt is successful
+21-06-21 07:42.097 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 1.0 53 89 74 12.7 45 added
+21-06-21 07:42.100 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 1 8 45.3 7 15.7 78.3 added
+21-06-21 07:42.100 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 1 1 2 2 3 3 added
+21-06-21 07:42.100 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 9.0 45.3 0.8 15 13.2 7 added
+21-06-21 07:42.101 [main] INFO  com.fairycompany.shape.parser.TriangleParser - Parsing is successful
+21-06-21 07:55.669 [main] INFO  com.fairycompany.shape.reader.TriangleReader - Read file data.txt is successful
+21-06-21 07:55.673 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 1.0 53 89 74 12.7 45 added
+21-06-21 07:55.676 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 1 8 45.3 7 15.7 78.3 added
+21-06-21 07:55.676 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 9.0 45.3 0.8 15 13.2 7 added
+21-06-21 07:55.676 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 3 2 0 0.0 7 5.0 added
+21-06-21 07:55.677 [main] INFO  com.fairycompany.shape.parser.TriangleParser - Parsing is successful
+21-06-21 07:55.678 [main] INFO  com.fairycompany.shape.creator.TriangleCreator - Creating Triangle list is successful
+21-06-21 07:57.735 [main] INFO  com.fairycompany.shape.reader.TriangleReader - Read file data.txt is successful
+21-06-21 07:57.739 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 1.0 53 89 74 12.7 45 added
+21-06-21 07:57.742 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 1 8 45.3 7 15.7 78.3 added
+21-06-21 07:57.742 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 9.0 45.3 0.8 15 13.2 7 added
+21-06-21 07:57.743 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 3 2 0 0.0 7 5.0 added
+21-06-21 07:57.743 [main] INFO  com.fairycompany.shape.parser.TriangleParser - Parsing is successful
+21-06-21 07:57.745 [main] INFO  com.fairycompany.shape.creator.TriangleCreator - Creating Triangle list is successful
+21-06-21 07:57.747 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 90.47098982546837
+21-06-21 07:57.747 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 81.62530244966936
+21-06-21 07:57.747 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 14.173566946961516
+21-06-21 07:57.748 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Perimeter of triangle #1 is 186.26985922209926
+21-06-21 07:57.748 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Area of triangle #1 is 474.84999999999997
+21-06-21 07:57.748 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 44.311285244280604
+21-06-21 07:57.748 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 77.2000647668122
+21-06-21 07:57.748 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 71.82047061945501
+21-06-21 07:57.748 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Perimeter of triangle #2 is 193.33182063054784
+21-06-21 07:57.749 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Area of triangle #2 is 1564.495
+21-06-21 07:57.749 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 31.389966549838817
+21-06-21 07:57.749 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 14.756693396557372
+21-06-21 07:57.749 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 38.529599011668935
+21-06-21 07:57.749 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Perimeter of triangle #3 is 84.67625895806512
+21-06-21 07:57.750 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Area of triangle #3 is 220.65999999999997
+21-06-21 07:57.750 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 3.605551275463989
+21-06-21 07:57.750 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 8.602325267042627
+21-06-21 07:57.750 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 5.0
+21-06-21 07:57.750 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Perimeter of triangle #4 is 17.207876542506618
+21-06-21 07:57.751 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Area of triangle #4 is 0.5
+21-06-21 07:58.605 [main] INFO  com.fairycompany.shape.reader.TriangleReader - Read file data.txt is successful
+21-06-21 07:58.609 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 1.0 53 89 74 12.7 45 added
+21-06-21 07:58.612 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 1 8 45.3 7 15.7 78.3 added
+21-06-21 07:58.612 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 9.0 45.3 0.8 15 13.2 7 added
+21-06-21 07:58.613 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 3 2 0 0.0 7 5.0 added
+21-06-21 07:58.613 [main] INFO  com.fairycompany.shape.parser.TriangleParser - Parsing is successful
+21-06-21 07:58.615 [main] INFO  com.fairycompany.shape.creator.TriangleCreator - Creating Triangle list is successful
+21-06-21 07:58.617 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 90.47098982546837
+21-06-21 07:58.617 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 81.62530244966936
+21-06-21 07:58.617 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 14.173566946961516
+21-06-21 07:58.617 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Perimeter of triangle #1 is 186.26985922209926
+21-06-21 07:58.617 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Area of triangle #1 is 474.84999999999997
+21-06-21 07:58.618 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 44.311285244280604
+21-06-21 07:58.618 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 77.2000647668122
+21-06-21 07:58.618 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 71.82047061945501
+21-06-21 07:58.618 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Perimeter of triangle #2 is 193.33182063054784
+21-06-21 07:58.618 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Area of triangle #2 is 1564.495
+21-06-21 07:58.619 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 31.389966549838817
+21-06-21 07:58.619 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 14.756693396557372
+21-06-21 07:58.619 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 38.529599011668935
+21-06-21 07:58.619 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Perimeter of triangle #3 is 84.67625895806512
+21-06-21 07:58.619 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Area of triangle #3 is 220.65999999999997
+21-06-21 07:58.619 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 3.605551275463989
+21-06-21 07:58.620 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 8.602325267042627
+21-06-21 07:58.620 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 5.0
+21-06-21 07:58.620 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Perimeter of triangle #4 is 17.207876542506618
+21-06-21 07:58.620 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Area of triangle #4 is 0.5
+21-06-21 09:04.889 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 4.0
+21-06-21 09:04.891 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 5.385164807134504
+21-06-21 09:04.891 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 5.385164807134504
+21-06-21 09:04.891 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Triangle #1 is isosceles
+21-06-21 12:15.421 [main] INFO  com.fairycompany.shape.reader.TriangleReader - Read file data.txt is successful
+21-06-21 12:15.426 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 1.0 53 89 74 12.7 45 added
+21-06-21 12:15.428 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 1 8 45.3 7 15.7 78.3 added
+21-06-21 12:15.429 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 9.0 45.3 0.8 15 13.2 7 added
+21-06-21 12:15.429 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 3 2 0 0.0 7 5.0 added
+21-06-21 12:15.430 [main] INFO  com.fairycompany.shape.parser.TriangleParser - Parsing is successful
+21-06-21 12:15.432 [main] INFO  com.fairycompany.shape.creator.TriangleCreator - Creating Triangle list is successful
+21-06-21 12:16.829 [main] INFO  com.fairycompany.shape.reader.TriangleReader - Read file data.txt is successful
+21-06-21 12:16.833 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 1.0 53 89 74 12.7 45 added
+21-06-21 12:16.836 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 1 8 45.3 7 15.7 78.3 added
+21-06-21 12:16.836 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 9.0 45.3 0.8 15 13.2 7 added
+21-06-21 12:16.837 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 3 2 0 0.0 7 5.0 added
+21-06-21 12:16.837 [main] INFO  com.fairycompany.shape.parser.TriangleParser - Parsing is successful
+21-06-21 12:16.839 [main] INFO  com.fairycompany.shape.creator.TriangleCreator - Creating Triangle list is successful
+21-06-21 12:16.841 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 90.47098982546837
+21-06-21 12:16.841 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 81.62530244966936
+21-06-21 12:16.841 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 14.173566946961516
+21-06-21 12:16.841 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Perimeter of triangle #1 is 186.26985922209926
+21-06-21 12:16.842 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Area of triangle #1 is 474.84999999999997
+21-06-21 12:16.842 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 44.311285244280604
+21-06-21 12:16.842 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 77.2000647668122
+21-06-21 12:16.842 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 71.82047061945501
+21-06-21 12:16.842 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Perimeter of triangle #2 is 193.33182063054784
+21-06-21 12:16.842 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Area of triangle #2 is 1564.495
+21-06-21 12:16.843 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 31.389966549838817
+21-06-21 12:16.843 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 14.756693396557372
+21-06-21 12:16.843 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 38.529599011668935
+21-06-21 12:16.843 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Perimeter of triangle #3 is 84.67625895806512
+21-06-21 12:16.843 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Area of triangle #3 is 220.65999999999997
+21-06-21 12:16.843 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 3.605551275463989
+21-06-21 12:16.844 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 8.602325267042627
+21-06-21 12:16.844 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 5.0
+21-06-21 12:16.844 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Perimeter of triangle #4 is 17.207876542506618
+21-06-21 12:16.844 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Area of triangle #4 is 0.5
+21-06-21 12:16.756 [main] INFO  com.fairycompany.shape.reader.TriangleReader - Read file data.txt is successful
+21-06-21 12:16.760 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 1.0 53 89 74 12.7 45 added
+21-06-21 12:16.763 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 1 8 45.3 7 15.7 78.3 added
+21-06-21 12:16.763 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 9.0 45.3 0.8 15 13.2 7 added
+21-06-21 12:16.764 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 3 2 0 0.0 7 5.0 added
+21-06-21 12:16.764 [main] INFO  com.fairycompany.shape.parser.TriangleParser - Parsing is successful
+21-06-21 12:16.766 [main] INFO  com.fairycompany.shape.creator.TriangleCreator - Creating Triangle list is successful
+21-06-21 12:18.674 [main] INFO  com.fairycompany.shape.reader.TriangleReader - Read file data.txt is successful
+21-06-21 12:18.679 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 1.0 53 89 74 12.7 45 added
+21-06-21 12:18.681 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 1 8 45.3 7 15.7 78.3 added
+21-06-21 12:18.682 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 9.0 45.3 0.8 15 13.2 7 added
+21-06-21 12:18.682 [main] DEBUG com.fairycompany.shape.parser.TriangleParser - 3 2 0 0.0 7 5.0 added
+21-06-21 12:18.682 [main] INFO  com.fairycompany.shape.parser.TriangleParser - Parsing is successful
+21-06-21 12:18.683 [main] INFO  com.fairycompany.shape.creator.TriangleCreator - Creating Triangle list is successful
+21-06-21 12:18.686 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 44.311285244280604
+21-06-21 12:18.686 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 77.2000647668122
+21-06-21 12:18.686 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 71.82047061945501
+21-06-21 12:18.686 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Perimeter of triangle #2 is 193.33182063054784
+21-06-21 12:18.686 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Area of triangle #2 is 1564.495
+21-06-21 12:18.687 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 31.389966549838817
+21-06-21 12:18.687 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 14.756693396557372
+21-06-21 12:18.687 [main] DEBUG fairycompany.shape.action.impl.TriangleCalculation - Сторона равна 38.529599011668935
+21-06-21 12:18.687 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Perimeter of triangle #3 is 84.67625895806512
+21-06-21 12:18.687 [main] INFO  fairycompany.shape.action.impl.TriangleCalculation - Area of triangle #3 is 220.65999999999997
