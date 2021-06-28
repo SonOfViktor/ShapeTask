@@ -1,12 +1,12 @@
 package com.fairycompany.shape.entity;
 
-public record Point(double X, double Y) {
+public record Point(double x, double y) {
 
     @Override
     public String toString() {
         var stringBuilder = new StringBuilder();
-        stringBuilder.append("X = ").append(X).append("\t")
-                .append("Y = ").append(Y);
+        stringBuilder.append("x = ").append(x).append("\t")
+                .append("y = ").append(y);
         return stringBuilder.toString();
     }
 }

@@ -14,7 +14,7 @@ public class TriangleObserver implements Observer {
     private static Logger logger = LogManager.getLogger();
 
     @Override
-    public void parameterChange(TriangleEvent event) {
+    public void parametersChange(TriangleEvent event) {
         var triangleWarehouse = TriangleWarehouse.getInstance();
         var triangleCalculation = new TriangleCalculation();
         Triangle triangle = event.getSource();
@@ -24,8 +24,8 @@ public class TriangleObserver implements Observer {
         double area = triangleCalculation.calculateArea(triangle);
         TriangleParameters triangleParameters = new TriangleParameters(perimeter, area);
 
-        triangleWarehouse.putParameters(triangle.getTriangleID(), triangleParameters);
+        triangleWarehouse.putParameters(triangle.getTriangleId(), triangleParameters);
 
-        logger.log(Level.INFO, "Parameters of the triangle #{} were updated", triangle.getTriangleID());
+        logger.log(Level.INFO, "Parameters of the triangle #{} were updated", triangle.getTriangleId());
     }
 }

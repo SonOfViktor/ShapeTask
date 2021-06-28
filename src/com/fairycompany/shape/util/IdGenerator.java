@@ -1,13 +1,13 @@
 package com.fairycompany.shape.util;
 
-public class IDGenerator {
+public class IdGenerator {
     private static long counter;
 
-    private IDGenerator(){
+    private IdGenerator(){
 
     }
 
-    public static long generateID() {
+    public static long generateId() {
         return ++counter;
     }
 }

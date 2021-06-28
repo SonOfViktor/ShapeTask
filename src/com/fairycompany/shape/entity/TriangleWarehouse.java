@@ -34,7 +34,7 @@ public class TriangleWarehouse {
         TriangleParameters data = instance.triangleMap.get(id);
 
         if (data == null) {
-            data = new TriangleParameters(-1, -1);
+            data = new TriangleParameters(0, 0);
             logger.log(Level.WARN, "ID {} is not found", id);
         }
 

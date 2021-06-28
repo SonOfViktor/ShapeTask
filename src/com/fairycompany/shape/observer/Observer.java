@@ -1,5 +1,5 @@
 package com.fairycompany.shape.observer;
 
 public interface Observer {
-    void parameterChange(TriangleEvent event);
+    void parametersChange(TriangleEvent event);
 }

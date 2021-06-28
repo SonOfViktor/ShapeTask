@@ -18,8 +18,8 @@ public class TriangleValidator {
     }
 
     public static boolean isTrianglePossible(Point pointA, Point pointB, Point pointC) {
-        return ((pointC.X() - pointA.X()) * (pointB.Y() - pointA.Y()) -
-                (pointC.Y() - pointA.Y()) * (pointB.X() - pointA.X()) != 0);
+        return ((pointC.x() - pointA.x()) * (pointB.y() - pointA.y()) -
+                (pointC.y() - pointA.y()) * (pointB.x() - pointA.x()) != 0);
     }
 
     public static boolean isTriangleData(String data) {

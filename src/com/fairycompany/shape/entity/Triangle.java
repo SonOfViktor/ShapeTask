@@ -4,7 +4,7 @@ import com.fairycompany.shape.exception.TriangleException;
 import com.fairycompany.shape.observer.Observable;
 import com.fairycompany.shape.observer.Observer;
 import com.fairycompany.shape.observer.TriangleEvent;
-import com.fairycompany.shape.util.IDGenerator;
+import com.fairycompany.shape.util.IdGenerator;
 import com.fairycompany.shape.validator.TriangleValidator;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -12,7 +12,7 @@ import org.apache.logging.log4j.Logger;
 
 public class Triangle implements Observable {
     private static Logger logger = LogManager.getLogger();
-    private final long triangleID;
+    private final long triangleId;
     private Point pointA;
     private Point pointB;
     private Point pointC;
@@ -23,14 +23,14 @@ public class Triangle implements Observable {
             throw new TriangleException("Points can't be on one line");
         }
 
-        this.triangleID = IDGenerator.generateID();
+        this.triangleId = IdGenerator.generateId();
         this.pointA = pointA;
         this.pointB = pointB;
         this.pointC = pointC;
     }
 
-    public long getTriangleID() {
-        return triangleID;
+    public long getTriangleId() {
+        return triangleId;
     }
 
     public Point getPointA() {
@@ -78,7 +78,7 @@ public class Triangle implements Observable {
         }
 
         var triangleEvent = new TriangleEvent(this);
-        observer.parameterChange(triangleEvent);
+        observer.parametersChange(triangleEvent);
     }
 
     @Override
@@ -104,7 +104,7 @@ public class Triangle implements Observable {
     @Override
     public String toString() {
         var stringBuilder = new StringBuilder();
-        stringBuilder.append(String.format("Triangle %05d", triangleID))
+        stringBuilder.append(String.format("Triangle %05d", triangleId))
                 .append("\nPoint A: ").append(pointA)
                 .append("\nPoint B: ").append(pointB)
                 .append("\nPoint C: ").append(pointC);

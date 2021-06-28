@@ -25,9 +25,6 @@ public class TriangleReader {
         Path dataFile = Paths.get(path);
 
         try (Stream<String> dataStream = Files.lines(dataFile)){
-            if (!Files.isReadable(dataFile) || Files.size(dataFile) == 0) {
-                throw new TriangleException(String.format("File %s does not exist or is empty", dataFile.getFileName()));
-            }
 
             doubleStringList = dataStream
                     .collect(Collectors.toList());
@@ -35,7 +32,7 @@ public class TriangleReader {
             logger.log(Level.INFO, "Read file {} is successful", dataFile.getFileName());
 
         } catch (IOException e) {
-            throw new TriangleException(String.format("Input error during reading file %s", dataFile.getFileName()));
+            throw new TriangleException(String.format("Input error during reading file %s", dataFile.getFileName()), e);
         }
 
         return doubleStringList;
