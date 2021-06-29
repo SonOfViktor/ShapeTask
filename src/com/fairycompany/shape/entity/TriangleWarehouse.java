@@ -6,6 +6,8 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
+import java.util.OptionalDouble;
 
 public class TriangleWarehouse {
     private static Logger logger = LogManager.getLogger();
@@ -30,14 +32,9 @@ public class TriangleWarehouse {
         instance.triangleMap.put(id, triangleParameters);
     }
 
-    public TriangleParameters getParameters(long id) {
-        TriangleParameters data = instance.triangleMap.get(id);
+    public Optional<TriangleParameters> getParameters(long id) {
+        Optional<TriangleParameters> parameters = Optional.ofNullable(instance.triangleMap.get(id));
 
-        if (data == null) {
-            data = new TriangleParameters(0, 0);
-            logger.log(Level.WARN, "ID {} is not found", id);
-        }
-
-        return data;
+        return parameters;
     }
 }

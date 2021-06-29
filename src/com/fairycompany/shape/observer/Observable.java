@@ -5,5 +5,5 @@ public interface Observable {
 
     void detach();
 
-    void notifyObservers();
+    void notifyObserver();
 }

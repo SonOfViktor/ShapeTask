@@ -3,10 +3,12 @@ package com.fairycompany.shape.action;
 import com.fairycompany.shape.entity.Triangle;
 import com.fairycompany.shape.exception.TriangleException;
 
-public interface ShapeCalculation {
-    double calculatePerimeter(Triangle triangle);
+import java.util.OptionalDouble;
 
-    double calculateArea(Triangle triangle);
+public interface ShapeCalculation {
+    OptionalDouble calculatePerimeter(Triangle triangle);
+
+    OptionalDouble calculateArea(Triangle triangle);
 
     public boolean isRightTriangle(Triangle triangle);
 

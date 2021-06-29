@@ -4,6 +4,7 @@ import com.fairycompany.shape.exception.TriangleException;
 import com.fairycompany.shape.observer.Observable;
 import com.fairycompany.shape.observer.Observer;
 import com.fairycompany.shape.observer.TriangleEvent;
+import com.fairycompany.shape.observer.impl.TriangleObserver;
 import com.fairycompany.shape.util.IdGenerator;
 import com.fairycompany.shape.validator.TriangleValidator;
 import org.apache.logging.log4j.Level;
@@ -16,7 +17,7 @@ public class Triangle implements Observable {
     private Point pointA;
     private Point pointB;
     private Point pointC;
-    private Observer observer;
+    private Observer observer = new TriangleObserver();
 
     public Triangle(Point pointA, Point pointB, Point pointC) throws TriangleException {
         if (!TriangleValidator.isTrianglePossible(pointA, pointB, pointC)) {
@@ -39,7 +40,7 @@ public class Triangle implements Observable {
 
     public void setPointA(Point pointA) {
         this.pointA = pointA;
-        notifyObservers();
+        notifyObserver();
     }
 
     public Point getPointB() {
@@ -48,7 +49,7 @@ public class Triangle implements Observable {
 
     public void setPointB(Point pointB) {
         this.pointB = pointB;
-        notifyObservers();
+        notifyObserver();
     }
 
     public Point getPointC() {
@@ -57,7 +58,7 @@ public class Triangle implements Observable {
 
     public void setPointC(Point pointC) {
         this.pointC = pointC;
-        notifyObservers();
+        notifyObserver();
     }
 
     @Override
@@ -71,7 +72,7 @@ public class Triangle implements Observable {
     }
 
     @Override
-    public void notifyObservers() {
+    public void notifyObserver() {
         if (observer == null) {
             logger.log(Level.INFO, "Observer is null");
             return;
