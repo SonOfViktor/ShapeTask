@@ -15,15 +15,16 @@ public class TriangleObserver implements Observer {
     private static Logger logger = LogManager.getLogger();
 
     @Override
-    public void parametersChange(TriangleEvent event) throws TriangleException {
+    public void parametersChange(TriangleEvent event) {
         var triangleWarehouse = TriangleWarehouse.getInstance();
         var triangleCalculation = new TriangleCalculation();
         Triangle triangle = event.getSource();
 
         double perimeter = triangleCalculation.calculatePerimeter(triangle)
-                .orElseThrow(() -> new TriangleException("This triangle is null"));
+                .orElseThrow(() -> new RuntimeException("This triangle is null"));
         double area = triangleCalculation.calculateArea(triangle)
-                .orElseThrow(() -> new TriangleException("This triangle is null"));
+                .orElseThrow(() -> new RuntimeException("This triangle is null"));
+
         TriangleParameters triangleParameters = new TriangleParameters(perimeter, area);
 
         triangleWarehouse.putParameters(triangle.getTriangleId(), triangleParameters);

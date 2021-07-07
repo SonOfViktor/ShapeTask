@@ -21,6 +21,7 @@ public class TriangleParser {
         List<double[]> doubleArraysList;
 
         doubleArraysList = doubleStringList.stream()
+                .map(String::trim)
                 .filter(TriangleValidator::isTriangleData)
                 .peek(line -> logger.log(Level.DEBUG, "{} added", line))
                 .map(line -> line.split(SPACE_DELIMITER_REGEX))

@@ -4,12 +4,12 @@ import com.fairycompany.shape.action.impl.TriangleCalculation;
 import com.fairycompany.shape.entity.Triangle;
 import com.fairycompany.shape.repository.TriangleSpecification;
 
-public class IsoscelesTriangleTriangleSpecification implements TriangleSpecification {
+public class AcuteTriangleSpecification implements TriangleSpecification {
     @Override
     public boolean specify(Triangle triangle) {
 
         var triangleCalculation = new TriangleCalculation();
 
-        return triangleCalculation.isIsoscelesTriangle(triangle);
+        return triangleCalculation.isAcuteTriangle(triangle);
     }
 }

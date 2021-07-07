@@ -10,6 +10,8 @@ import org.apache.logging.log4j.Logger;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class TriangleCreator {
     private static Logger logger = LogManager.getLogger();
@@ -33,7 +35,7 @@ public class TriangleCreator {
     }
 
     public Triangle createTriangle(double[] coordinateArray) throws TriangleException {
-        if (coordinateArray.length != VALID_AMOUNT_OF_COORDINATE) {
+        if (coordinateArray == null || coordinateArray.length != VALID_AMOUNT_OF_COORDINATE) {
             throw new TriangleException(String.format("Parameters %s aren't correct", Arrays.toString(coordinateArray)));
         }
 

@@ -9,7 +9,7 @@ public class AreaTriangleSpecification implements TriangleSpecification {
     private double fromArea;
     private double toArea;
 
-    AreaTriangleSpecification(double fromArea, double toArea) {
+    public AreaTriangleSpecification(double fromArea, double toArea) {
         this.fromArea = fromArea;
         this.toArea = toArea;
     }
